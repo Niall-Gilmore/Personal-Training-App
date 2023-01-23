@@ -3,6 +3,7 @@ import './Login.css';
 
 
 const  express = require ('express');
+const mysql = require ('mysql');
 const app = express();
 
 
@@ -21,9 +22,9 @@ db.connect ((error) => {
   }
 })
 
-// app.listen(3000, () => {
-//   console.log("Server started on port 3000");
-// })
+app.listen(3000, () => {
+  console.log("Server started on port 3000");
+})
 
 
 export default class Login extends Component {
