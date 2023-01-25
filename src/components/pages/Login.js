@@ -2,31 +2,6 @@ import React, { Component } from 'react'
 import './Login.css';
 
 
-const  express = require ('express');
-const mysql = require ('mysql');
-const app = express();
-
-
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'personal_training_app',
-})
-
-db.connect ((error) => {
-  if(error) {
-  console.log(error) 
-  } else {
-    console.log("MYSQL Connected...")
-  }
-})
-
-app.listen(3000, () => {
-  console.log("Server started on port 3000");
-})
-
-
 export default class Login extends Component {
   render() {
     return (
